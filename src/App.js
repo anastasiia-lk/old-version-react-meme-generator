@@ -8,7 +8,7 @@ function App() {
     'https://partycity6.scene7.com/is/image/PartyCity/_pdp_sq_?$_1000x1000_$&$product=PartyCity/615535',
   );
   // choose an image
-  const [indexOutput, setIndexOutput] = useState(0);
+  // const [indexOutput, setIndexOutput] = useState(0);
   const [elementOutput, setElementOutput] = useState(
     'https://images-na.ssl-images-amazon.com/images/I/71PbbmDKazL._SY450_.jpg',
   );
@@ -67,7 +67,7 @@ function App() {
     xhr.open('GET', url, true);
     xhr.responseType = 'blob';
     xhr.onload = function (e) {
-      if (this.status == 200) {
+      if (this.status === 200) {
         const blob = this.response;
         const a = document.createElement('a');
         document.body.appendChild(a);
